@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {NavLink} from 'react-router-dom'; //Used for linking
 import {HashLink as Link} from 'react-router-hash-link';
 //import {Dropdown} from 'react-bootstrap';
@@ -30,31 +30,49 @@ const Chapterone = (props) => {
   const Question = () => {
 
     const [correctChoice , setCorrectChoice] = useState("");
+    const [choice, setChoice] = useState({});
 
     const {
       question,
       choices
     } = questionOptions;
 
+    // () => {
+    //   if (index.correct === true) {
+    //     setCorrectChoice("Correct!")
+    //   } else {
+    //     setCorrectChoice("Incorrect!")
+    //   }
+    // }
+
     return (
       <div>
-        <h3>{question}</h3>
+       <div className="questionBox">
+       <h3>{question}</h3>
        <h5>{correctChoice}</h5>
-        <ul>
-          {
-            choices.map((index) => (
-              <div key={choices.indexOf(index)} >
-                <li onClick={() => {
-                  if (index.correct === true) {
-                    setCorrectChoice("Correct!")
-                  } else {
-                    setCorrectChoice("Incorrect!")
-                  }
-                }}>{index.choice}</li>
-              </div>
-            ))
-          }
-        </ul>
+            {
+              choices.map((index) => (
+                <div key={choices.indexOf(index)} >
+                  <label>
+                    <input type="radio" name="choices" onChange={() => {
+                     setChoice(index);
+                  }} />
+                    {index.choice}
+                  </label>
+                </div>
+              ))
+            }
+          <br/>
+       <button onClick={() => {
+         if (choice.correct === true) {
+           setCorrectChoice("Correct!")
+         } else {
+           setCorrectChoice("Incorrect!")
+         }
+       }}>
+         Submit
+       </button>
+       </div>
       </div>
     )
   }
