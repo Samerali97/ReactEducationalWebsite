@@ -1,0 +1,49 @@
+
+.Title {
+  text-align: center;
+  text-shadow: 2px 2px 5px  black;
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.maincontent {
+  padding: 0px 10px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+.Welcome {
+  color: black;
+  font-size: 45px;
+}
+
+.Content {
+  font-size: 30px;
+}
+
+.topnavbar {
+  /*background-color: #333;*/
+  background-color: #111;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnavbar a {
+  float: left;
+  color: #818181;
+  text-align: center;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnavbar a:hover {
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.topnavbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
