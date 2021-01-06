@@ -1,0 +1,16 @@
+.ChapterTitle {
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.main {
+    margin-left: 175px; /* Same as the width of the sidenav */
+    font-size: 28px; 
+    padding: 0px 10px;
+    font-family: "Lato", sans-serif;
+  }
+
+.questionBox{
+    margin-left: 175px; /* Same as the width of the sidenav */
+    font-size: 28px; 
+}
